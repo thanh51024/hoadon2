@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/hoadon2/static/css/main.0bfa1f7c.css",
-    "main.js": "/hoadon2/static/js/main.d765e70e.js",
+    "main.js": "/hoadon2/static/js/main.d4c674e7.js",
     "static/js/488.9c92ff38.chunk.js": "/hoadon2/static/js/488.9c92ff38.chunk.js",
     "static/media/qr.png": "/hoadon2/static/media/qr.e0c5c04f4c2491e0ce5b.png",
     "index.html": "/hoadon2/index.html",
     "main.0bfa1f7c.css.map": "/hoadon2/static/css/main.0bfa1f7c.css.map",
-    "main.d765e70e.js.map": "/hoadon2/static/js/main.d765e70e.js.map",
+    "main.d4c674e7.js.map": "/hoadon2/static/js/main.d4c674e7.js.map",
     "488.9c92ff38.chunk.js.map": "/hoadon2/static/js/488.9c92ff38.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0bfa1f7c.css",
-    "static/js/main.d765e70e.js"
+    "static/js/main.d4c674e7.js"
   ]
 }
