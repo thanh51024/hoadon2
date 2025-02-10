@@ -18,12 +18,16 @@ function App() {
     <Router>
       <div style={{ maxWidth: "600px", margin: "auto", padding: "20px" }}>
         {/* Form luôn hiển thị */}
-        <ReceiptForm onGenerate={handleGenerate} />
 
         {/* Điều hướng và hiển thị biên lai nếu có dữ liệu */}
         <Routes>
           <Route
             path="/"
+            element={<ReceiptForm onGenerate={handleGenerate} />}
+          />
+
+          <Route
+            path="/hoadon2"
             element={
               receiptData ? (
                 <ReceiptGenerator data={receiptData} onReset={handleReset} />
