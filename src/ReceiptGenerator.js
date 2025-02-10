@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import * as htmlToImage from "html-to-image";
 import download from "downloadjs";
 import { Card, Button } from "./components/1/ui";
-
+import qr from "./img/qr.png";
 const ReceiptGenerator = ({ data, onReset }) => {
   const receiptRef = useRef(null);
   const [sortedDates, setSortedDates] = useState([]);
@@ -122,7 +122,7 @@ const ReceiptGenerator = ({ data, onReset }) => {
           >
             <h4>Quét mã để thanh toán</h4>
             <img
-              src="/img/qr.png"
+              src={qr}
               alt="QR Code"
               style={{ width: "100px", height: "100px" }}
             />

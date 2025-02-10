@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import ReceiptForm from "./ReceiptForm";
 import ReceiptGenerator from "./ReceiptGenerator";
 
@@ -14,15 +15,27 @@ function App() {
   };
 
   return (
-    <div style={{ maxWidth: "600px", margin: "auto", padding: "20px" }}>
-      {/* Form luôn hiển thị */}
-      <ReceiptForm onGenerate={handleGenerate} />
+    <Router>
+      <div style={{ maxWidth: "600px", margin: "auto", padding: "20px" }}>
+        {/* Form luôn hiển thị */}
+        <ReceiptForm onGenerate={handleGenerate} />
 
-      {/* Hiển thị biên lai nếu có dữ liệu */}
-      {receiptData && (
-        <ReceiptGenerator data={receiptData} onReset={handleReset} />
-      )}
-    </div>
+        {/* Điều hướng và hiển thị biên lai nếu có dữ liệu */}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              receiptData ? (
+                <ReceiptGenerator data={receiptData} onReset={handleReset} />
+              ) : (
+                <div>Vui lòng tạo biên lai.</div>
+              )
+            }
+          />
+          {/* Thêm các route khác nếu cần */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
